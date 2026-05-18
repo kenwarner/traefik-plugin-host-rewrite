@@ -1,0 +1,12 @@
+displayName: Wildcard Host Rewrite
+type: middleware
+import: github.com/kenwarner/traefik-plugin-host-rewrite
+summary: Rewrite request Host values with regex capture rules.
+testData:
+  rules:
+    - pattern: "^preview-([a-z0-9-]+)\\.example\\.com$"
+      replacement: "$1.internal.example.net"
+  allowedSuffixes:
+    - ".internal.example.net"
+  preserveForwardedHost: true
+  originalHostHeader: X-Original-Host
