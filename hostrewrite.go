@@ -1,6 +1,6 @@
-// Package traefikwildcardhostrewrite provides a Traefik middleware that rewrites
+// Package traefikhostrewrite provides a Traefik middleware that rewrites
 // request hosts with configured regular-expression rules.
-package traefikwildcardhostrewrite
+package traefikhostrewrite
 
 import (
 	"context"

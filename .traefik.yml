@@ -1,4 +1,4 @@
-displayName: Wildcard Host Rewrite
+displayName: Host Rewrite
 type: middleware
 import: github.com/kenwarner/traefik-plugin-host-rewrite
 summary: Rewrite request Host values with regex capture rules.

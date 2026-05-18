@@ -1,4 +1,4 @@
-package traefikwildcardhostrewrite
+package traefikhostrewrite
 
 import (
 	"context"

@@ -1,4 +1,4 @@
-# Traefik Wildcard Host Rewrite
+# Traefik Plugin Host Rewrite
 
 Traefik middleware plugin that rewrites request `Host` values with regex capture rules.
 
@@ -30,7 +30,7 @@ Static configuration:
 ```yaml
 experimental:
   plugins:
-    wildcardHostRewrite:
+    hostRewrite:
       moduleName: github.com/kenwarner/traefik-plugin-host-rewrite
       version: v0.1.0
 ```
@@ -53,7 +53,7 @@ http:
   middlewares:
     rewrite-preview-host:
       plugin:
-        wildcardHostRewrite:
+        hostRewrite:
           rules:
             - pattern: "^preview-([a-z0-9-]+)\\.example\\.com$"
               replacement: "$1.internal.example.net"
@@ -88,7 +88,7 @@ Static configuration for local mode:
 ```yaml
 experimental:
   localPlugins:
-    wildcardHostRewrite:
+    hostRewrite:
       moduleName: github.com/kenwarner/traefik-plugin-host-rewrite
 ```
 
